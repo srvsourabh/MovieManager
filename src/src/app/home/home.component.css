@@ -1,0 +1,40 @@
+div.shift{
+    align-self: center;
+    padding-left : 100px;     
+    padding-bottom: 50px;
+}
+
+div.gallery {
+    margin: 5px 0px 50px 20px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 250px;
+
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 5px;
+    text-align: center;
+}
+
+.dot {
+    height: 28px;
+    width: 30px;
+    background-color: orange;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom : -5px;
+}
+
+.center {
+    text-align: center;
+}

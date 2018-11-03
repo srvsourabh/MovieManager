@@ -1,0 +1,21 @@
+<div class="jumbotron text-center">
+  <h1>Welcome to Movie Manager</h1>
+</div>
+
+<div class="shift">
+    <div class="gallery" *ngFor="let list of lists, let i = index">
+      <img src="../assets/images/thumb.jpg" width="600px" height="400px"/>
+      <div class="desc">Rating : <p class="dot">{{ list.ddlRate }}</p></div>
+      <div class="desc">Movie : {{ list.txtName }}</div>        
+      <div class="desc">Release Date : {{ list.txtRdate | date:'dd/MM/yyyy'}}</div>
+      <div class="desc">Directors : {{ list.txtDirectors }}</div>
+      <div class="desc">Producers : {{ list.txtProducers }}</div>
+      <div class="desc">Actor : {{ list.txtActor }}</div>
+      <div class="desc">Actress : {{ list.txtActress }} </div>
+      <div class="desc">Distributor : {{ list.txtDistributor }}</div>      
+      <div class="center"><a href="{{list.txtLink}}">Official Website</a></div>
+      <div class="desc" style="align-items: center;">
+        <button type="submit" (click)="removeMovie(i)">Delete</button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,113 @@
+<div class="jumbotron">
+    <h3>MOVIE ENTRY PAGE</h3>
+    <form #frmMovie="ngForm" (ngSubmit)="addMovie(frmMovie)">
+        <div class="row">
+          <div class="col1">
+            <input type="text" ngModel name="txtName" #txtName="ngModel" placeholder="Enter Movie Name" required /> 
+              <div style="margin-left: 40px; margin-right: 8%;" *ngIf="txtName.invalid && (txtName.dirty || txtName.touched)" class="alert alert-danger">
+                <div class="col1" *ngIf="txtName.errors.required"> Movie Name is required.</div>
+              </div>
+            </div>
+        </div>        
+        <div class="row">
+          <div class="col1">
+            <select  ngModel #ddlCountry="ngModel"  name="ddlCountry" required>
+              <option value="">-- Select Country --</option>
+              <option value="india">India</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+        </div>       
+        <div class="row">
+          <div class="col1">
+            <input type="date" ngModel #txtRdate="ngModel" name="txtRdate" maxlength="8" placeholder="Enter Release Date" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            <input type="text" ngModel #txtDirectors="ngModel" name="txtDirectors" placeholder="Enter Directors Name" required />
+              <div style="margin-left: 40px; margin-right: 8%;" *ngIf="txtDirectors.invalid && (txtDirectors.dirty || txtDirectors.touched)" class="alert alert-danger">
+                <div class="col1" *ngIf="txtDirectors.errors.required"> Director Name is required.</div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            <input type="text" ngModel #txtProducers="ngModel" name="txtProducers" placeholder="Enter Producers Name" required />
+              <div style="margin-left: 40px; margin-right: 8%;" *ngIf="txtProducers.invalid && (txtProducers.dirty || txtProducers.touched)" class="alert alert-danger">
+                <div class="col1" *ngIf="txtProducers.errors.required"> Producer Name is required.</div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            <input type="text" ngModel #txtActor="ngModel" name="txtActor" placeholder="Enter Lead Actor Name" required />
+              <div style="margin-left: 40px; margin-right: 8%;" *ngIf="txtActor.invalid && (txtActor.dirty || txtActor.touched)" class="alert alert-danger">
+                <div class="col1" *ngIf="txtActor.errors.required"> Actor Name is required.</div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            <input type="text" ngModel #txtActress="ngModel" name="txtActress" placeholder="Enter Lead Actress Name" required />
+              <div style="margin-left: 40px; margin-right: 8%;" *ngIf="txtActress.invalid && (txtActress.dirty || txtActress.touched)" class="alert alert-danger">
+                <div class="col1" *ngIf="txtActress.errors.required"> Actress Name is required.</div>
+              </div>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col1">
+            <input type="text" ngModel #txtDistributor="ngModel" name="txtDistributor" placeholder="Enter Distributor Name" required />
+              <div style="margin-left: 40px; margin-right: 8%;" *ngIf="txtDistributor.invalid && (txtDistributor.dirty || txtDistributor.touched)" class="alert alert-danger">
+                <div class="col1" *ngIf="txtDistributor.errors.required"> Distributor Name is required.</div>
+              </div>
+          </div>
+        </div>        
+        <div class="row">
+          <div class="col1">
+            <input type="text" ngModel #txtLink="ngModel" name="txtLink" placeholder="Enter Official Link" required />
+              <div style="margin-left: 40px; margin-right: 8%;" *ngIf="txtLink.invalid && (txtLink.dirty || txtLink.touched)" class="alert alert-danger">
+                <div class="col1" *ngIf="txtLink.errors.required"> Link is required.</div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col1">
+            <select ngModel #ddlRate="ngModel" name="ddlRate">
+              <option value="">-- Select Rating For Movie --</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
+              <option value="3">3</option>
+              <option value="3.5">3.5</option>
+              <option value="4">4</option>
+              <option value="4.5">4.5</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>            
+        <div class="row">
+          <div class="col1">
+            <select ngModel #ddlRelease="ngModel" name="ddlRelease">
+              <option value="">-- Select Release Type --</option>
+              <option value="cinema">Cinema</option>
+              <option value="dvd">DVD</option>
+              <option value="tv">TV</option>
+            </select>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col1">
+            <input type='file' ngModel #flUpload="ngModel"  name="flUpload" required />
+          </div>
+        </div> 
+        
+        <div class="row">            
+          <button type="submit">Submit</button>
+          <button type="button">Cancel</button> 
+        </div>
+    </form>
+</div>

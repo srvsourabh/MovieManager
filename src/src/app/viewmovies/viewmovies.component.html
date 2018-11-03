@@ -1,0 +1,40 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col1">
+      <table>
+          <thead>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Release</th>
+            <th>Directors</th>
+            <th>Producers</th>
+            <th>Lead Actors</th>
+            <th>Lead Actress</th>
+            <th>Distributors</th>
+            <th>Links</th>
+            <th>Ratings</th>
+            <th>Release Type</th>
+            <th>Country</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let list of lists, let i = index">
+              <td><img src="../../assets/images/thumb.jpg" width="150px" height="150px"/> </td>
+              <td>{{ list.txtName }}</td>
+              <td>{{ list.txtRdate }}</td>
+              <td>{{ list.txtDirectors }}</td>              
+              <td>{{ list.txtProducers }}</td>
+              <td>{{ list.txtActor }}</td>
+              <td>{{ list.txtActress }}</td>
+              <td>{{ list.txtDistributor }}</td>
+              <td>{{ list.ddlRate }}</td>
+              <td>{{ list.ddlRelease }}</td>              
+              <td>{{ list.ddlCountry }}</td>
+              <td>
+                <button type="submit" (click)="removeMovie(i)">Delete</button>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
